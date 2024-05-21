@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather forcast</title>
+    <style>
+        H{
+            margin:left;
+            color:#4CAF50;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        select {
+            width: 100%;
+            padding: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .output {
+            margin-top: 20px;
+        } 
+    </style>
+</head>
+<body>
+    <big>
+       
+    <H>WEATHER FORCAST</H></big>
+
+<div class="container">
+    <div class="section">
+        <label for="city">Select City:</label>
+        <select id="city">
+            <option value="Delhi">Delhi</option>
+            <option value="Greater Noida">Greater Noida</option>
+            <option value=" Noida"> Noida</option>
+            
+            <option value=" Gorakhpur"> Gorakhpur </option>
+        </select>
+    </div>
+
+    <div class="section">
+        <label for="day">Select Day:</label>
+        <select id="day">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+        </select>
+    </div>
+
+    <button onclick="submit()">Submit</button>
+
+    <div class="output" id="output"></div>
+</div>
+
+<script>
+    function submit() {
+        const city = document.getElementById('city').value;
+        const day = document.getElementById('day').value;
+        const output = document.getElementById('output');
+        output.innerHTML = `<p>Selected City: ${city}</p><p>Selected Day: ${day}</p>`;
+    }
+</script>
+
+</body>
+</html>
